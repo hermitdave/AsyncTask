@@ -1,0 +1,45 @@
+﻿<Page
+    x:Class="AsyncTask.MainPage"
+    xmlns:xamltoolkit="using:WinRTXamlToolkit.Controls"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:AsyncTask"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Row="1" Text="Basic Async Samples" Style="{StaticResource HeaderTextStyle}" HorizontalAlignment="Center"/>
+        <xamltoolkit:WrapPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Button x:Name="btnWait1" Width="400" Content="Simple async await" FontSize="26" Margin="10, 20, 0, 0" Click="btnWait1_Click" />
+            <Button x:Name="btnWait2" Width="400" Content="Wait many tasks - wrong way" FontSize="26" Margin="20, 20, 0, 0" Click="btnWait2_Click" />
+            <Button x:Name="btnWait3" Width="400" Content="Wait many tasks - better way" FontSize="26" Margin="20, 20, 10, 0" Click="btnWait3_Click" />
+            <Button x:Name="btnWait4" Width="400" Content="Wait many tasks - twist" FontSize="26" Margin="10, 20, 0, 0" Click="btnWait4_Click" />
+            <Button x:Name="btnWait5" Width="400" Content="Wait many tasks - for loop" FontSize="26" Margin="20, 20, 0, 0" Click="btnWait5_Click" />
+            <Button x:Name="btnWait6" Width="400" Content="Await and Return Data" FontSize="26" Margin="20, 20, 10, 0" Click="btnWait6_Click" />
+            <Button x:Name="btnWait7" Width="400" Content="Await and Exceptions" FontSize="26" Margin="10, 20, 0, 0" Click="btnWait7_Click" />
+            <Button x:Name="btnWait8" Width="400" Content="Await and keep busy" FontSize="26" Margin="20, 20, 0, 0" Click="btnWait8_Click" />
+            <Button x:Name="btnWait9" Width="400" Content="Await, keep busy &amp; exceptions" FontSize="26" Margin="20, 20, 10, 0" Click="btnWait9_Click" />
+        </xamltoolkit:WrapPanel>
+        <TextBlock Grid.Row="3" Text="CPU intensive Async Samples" Margin="20" Style="{StaticResource HeaderTextStyle}" HorizontalAlignment="Center"/>
+        <xamltoolkit:WrapPanel Grid.Row="4" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Button x:Name="btnWait10" Width="400" Content="ThreadPool.RunAsync" FontSize="26" Margin="10, 20, 00, 0" Click="btnWait10_Click" />
+            <Button x:Name="btnWait11" Width="400" Content="Task.Run" FontSize="26" Margin="20, 20, 10, 0" Click="btnWait11_Click" />
+        </xamltoolkit:WrapPanel>
+        <TextBlock Grid.Row="5" Text="Blocking threads by using Wait" Margin="20" Style="{StaticResource HeaderTextStyle}" HorizontalAlignment="Center"/>
+        <xamltoolkit:WrapPanel Grid.Row="6" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Button x:Name="btnWait12" Width="400" Content="Blocking UI thread ?" FontSize="26" Margin="20, 20, 10, 0" Click="btnWait12_Click" />
+            <Button x:Name="btnWait13" Width="400" Content="When is Wait okay ?" FontSize="26" Margin="20, 20, 0, 0" Click="btnWait13_Click" />            
+        </xamltoolkit:WrapPanel>
+    </Grid>
+</Page>
